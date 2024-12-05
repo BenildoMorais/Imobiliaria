@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="contenier">
+        <div class="login">
+            <div class="header">
+                <h1> Mutare Solucoes </h1>
+                <span> Barrulho nao ecomundar mas os seus clientes </span>
+            </div>
+            <div class="contenier-form">
+                <!-- Alterar a action para o link da tela MenuP -->
+                <form action="telaMenuP.html" method="GET">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="orquidio@gmail.com" id="email" required/>
+                    </div>
+                    <div>
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" required/>
+                    </div>
+                    <!-- Botão de login que envia o formulário e redireciona para MenuP -->
+                    <input type="submit" value="Conecte-se"/>
+                    <div class="signup">
+                        <a href="/telaCadastro.html">Criar uma conta</a>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

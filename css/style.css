@@ -1,0 +1,252 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global do body */
+body {
+    height: 100vh;
+    background: 
+        url("/assets/condo-2618421_960_720.jpg") no-repeat center center fixed, /* Imagem de fundo */
+        rgba(0, 0, 255, 0.5); /* Fundo azul com opacidade */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-repeat: no-repeat;
+    display: flex; /* Usando flexbox para o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* Estilo comum para containers e formulários */
+.contenier {
+    width: 100%;
+    max-width: 380px; /* Largura ajustada para tornar o formulário mais compacto */
+    background: rgba(0, 0, 255, 0.6); /* Cor de fundo azul com opacidade */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para o contêiner */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo do cabeçalho do formulário */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.header span {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Formulários */
+.contenier-form {
+    width: 100%;
+}
+
+form div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"],
+form select,
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 8px; /* Menos padding para ajustar o tamanho dos campos */
+    margin-top: 5px;
+    font-size: 0.95rem; /* Tamanho de fonte ajustado para caber melhor */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Textarea para descrição */
+form textarea {
+    min-height: 100px; /* Ajustando altura do textarea */
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+/* Botão de envio do formulário */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px 0; /* Ajustando o padding para tornar o botão mais proporcional */
+    font-size: 1.1rem; /* Tamanho de fonte ligeiramente maior para o botão */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Ajustes para inputs de arquivo */
+form input[type="file"] {
+    padding: 5px;
+    border: none;
+    background-color: #f7f7f7;
+}
+
+/* ---------------------------- Estilos para o Menu Principal (Com Sidebar) ---------------------------- */
+
+/* Aplica o estilo de Menu Principal apenas quando a classe "menu-principal" está presente no body */
+body.menu-principal {
+    display: flex;
+}
+
+/* Sidebar (Menu Lateral) */
+.sidebar {
+    width: 250px;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fixa a sidebar no topo à esquerda */
+    height: 100vh; /* Preenche toda a altura da tela */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo do menu à esquerda */
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Conteúdo Principal (com a Sidebar) */
+.main-content {
+    margin-left: 250px; /* Espaço à esquerda para a sidebar */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Estilo para a tela de Cadastro de Residência */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os campos do formulário de Residência */
+form div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 8px; /* Ajuste do tamanho dos campos */
+    margin-top: 5px;
+    font-size: 0.95rem; /* Fontes menores para ajustar o tamanho */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Textarea para Descrição da Residência */
+form textarea {
+    min-height: 100px; /* Ajustando a altura da área de texto */
+}
+
+/* Estilo para o botão de envio do formulário de Residência */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px 0; /* Ajustando o padding do botão */
+    font-size: 1.1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Ajustes para inputs de arquivo */
+form input[type="file"] {
+    padding: 5px;
+    border: none;
+    background-color: #f7f7f7;
+}
+
+/* ---------------------------- Estilos para outras páginas ---------------------------- */
+
+/* Formatação para telas com conteúdo centralizado (como Cadastro e Login) */
+body:not(.menu-principal) {
+    display: flex;
+    justify-content: center; /* Centraliza conteúdo para outras telas */
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    /* Área principal do conteúdo */
+}
